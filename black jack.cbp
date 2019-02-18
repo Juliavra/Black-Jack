@@ -35,7 +35,13 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="card.h" />
+		<Unit filename="codigo.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="header.h" />
+		<Unit filename="linkedlist.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="linkedlist.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

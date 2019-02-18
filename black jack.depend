@@ -6,7 +6,7 @@
 
 1549509726 c:\utn\mp3 l1brary manag3r\v 2.0\black jack\header.h
 
-1550032939 source:c:\utn\black jack\main.c
+1550500266 source:c:\utn\black jack\main.c
 	<stdio.h>
 	<stdlib.h>
 	"header.h"
@@ -15,15 +15,23 @@
 
 1550022905 c:\utn\black jack\header.h
 
-1550032939 source:c:\utn\black jack\card.c
+1550494011 source:c:\utn\black jack\card.c
 	<stdio.h>
 	<stdlib.h>
 	"linkedlist.h"
 	"card.h"
 
-1550032551 c:\utn\black jack\card.h
+1550494011 c:\utn\black jack\card.h
 	<stdio.h>
 	<stdlib.h>
 
-1549627167 c:\utn\black jack\linkedlist.h
+1550492549 c:\utn\black jack\linkedlist.h
+
+1550404035 source:c:\utn\black jack\codigo.c
+
+1550499130 source:c:\utn\black jack\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	"linkedlist.h"
+	"card.h"
 

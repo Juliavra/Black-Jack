@@ -5,23 +5,20 @@
 #include "linkedlist.h"
 #include "card.h"
 
-void fooCreatesCard (int *newCardValuePtr, int *newCardSuitPtr)      ///TIENE Q RECIBIR DOS PUNTEROS IICIALIZADOS EN NULL, CARAGAR EL RANDOM Y REVISAR Q AMBOS SEAN !=NULL Y pasar return 1 como exit 0 como failure
+void fooRandomizes_New_Card_Values (int *newCardValuePtr, int *newCardSuitPtr)      ///TIENE Q RECIBIR DOS PUNTEROS IICIALIZADOS EN NULL, CARAGAR EL RANDOM Y REVISAR Q AMBOS SEAN !=NULL Y pasar return 1 como exit 0 como failure
 {
-    int suit=0, value=0, opcion=0;
+    int suit=0, value=0;
 
 
-            printf("\t\tFOO INIT newCardValuePtr: %d\t newCardSuitPtr: %d\n", newCardValuePtr, newCardSuitPtr);
+   /// printf("\t\tFOO INIT newCardValuePtr: %d\t newCardSuitPtr: %d\n", newCardValuePtr, newCardSuitPtr);
 
-        suit = 1 + ( rand() % 4 );
-        value = 1 + ( rand() % 13 );
-        printf("\t\tFOO carta suit: %d\t value: %d\n", suit, value);
+    suit = 1 + ( rand() % 4 );
+    value = 1 + ( rand() % 13 );
+  ///  printf("\t\tFOO carta suit: %d\t value: %d\n", suit, value);
 
-        *newCardValuePtr=value;
-        *newCardSuitPtr=suit;
-
-
-
-        printf("\t\tFOO newCardValuePtr: %d \t newCardSuitPtr: %d\n", *newCardValuePtr, *newCardSuitPtr);
+    *newCardValuePtr=value;
+    *newCardSuitPtr=suit;
+  ///  printf("\t\tFOO newCardValuePtr: %d \t newCardSuitPtr: %d\n", *newCardValuePtr, *newCardSuitPtr);
 
 }
 
@@ -29,20 +26,84 @@ void fooCreatesCard (int *newCardValuePtr, int *newCardSuitPtr)      ///TIENE Q 
 ///********************************************************************************************************************************************************************************************
 card* card_newCard(void)
 {
-card* Card = (card*)malloc(sizeof(card));
-return Card;
+    card* this = (card*)malloc(sizeof(card));
+    if (this!= NULL)
+    {
+        this->suit=-1;
+        this->value=-1;
+    }
+    return this;
 }
 
 ///********************************************************************************************************************************************************************************************
 ///********************************************************************************************************************************************************************************************
-void setCard(void)
+card* cardCalloc_newCard(void)
 {
-
+    card *this;
+    this=(card*)calloc(1,sizeof(card));
+    if (this != NULL)
+    {
+        printf("Unable to Calloc");
+        //this->suit=-1;
+        //this->value=-1;
+    }
+    return this;
 }
 
 ///********************************************************************************************************************************************************************************************
 ///********************************************************************************************************************************************************************************************
-void getCard(void)
+int setCardSuit(card* this, int *newCardSuitPtr)
 {
-
+    int rtn=-1;
+    if(this != NULL && *newCardSuitPtr> 0 && *newCardSuitPtr< 5)
+        {
+    this->suit = *newCardSuitPtr;
+    rtn=1;
+        }
+        return rtn;
 }
+
+///********************************************************************************************************************************************************************************************
+///********************************************************************************************************************************************************************************************
+int getCardSuit (card* this)
+{
+    int rtn=-1;
+    if(this != NULL)
+        {
+            rtn=this->suit;
+        }
+
+        return rtn;
+}
+///********************************************************************************************************************************************************************************************
+///********************************************************************************************************************************************************************************************
+int setCardValue(card* this, int *newCardValuePtr)           /// int *newCardValuePtr  CORRESPONDE ESTE EN LUGAR DE VALIE
+{
+    int rtn=-1;
+    if(this != NULL && *newCardValuePtr> 0 && *newCardValuePtr<14)
+        {
+    this->value = *newCardValuePtr;
+    rtn=1;
+        }
+        return rtn;
+}
+
+///********************************************************************************************************************************************************************************************
+///********************************************************************************************************************************************************************************************
+int getCardValue (card* this)
+{
+    int rtn=-1;                                  ///RETRURN -1 = NOT OK
+    if(this != NULL)
+        {
+           rtn=this->value;
+        }
+        return rtn;
+}
+///***********************************************************************************************************************************************************************************************
+///***********************************************************************************************************************************************************************************************
+
+
+
+
+///***********************************************************************************************************************************************************************************************
+///***********************************************************************************************************************************************************************************************
