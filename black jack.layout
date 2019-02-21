@@ -2,48 +2,43 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="codigo.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1255" topLine="21" />
+		</Cursor>
+	</File>
 	<File name="card.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="91" topLine="0" />
+			<Cursor1 position="5384" topLine="102" />
+		</Cursor>
+	</File>
+	<File name="linkedlist.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2616" topLine="37" />
 		</Cursor>
 		<Folding>
-			<Collapse line="27" />
-			<Collapse line="40" />
-			<Collapse line="68" />
-			<Collapse line="93" />
+			<Collapse line="10" />
+			<Collapse line="57" />
 		</Folding>
+	</File>
+	<File name="linkedlist.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="459" topLine="9" />
+		</Cursor>
 	</File>
 	<File name="header.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="443" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="linkedlist.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1207" topLine="4" />
-		</Cursor>
-		<Folding>
-			<Collapse line="10" />
-		</Folding>
-	</File>
-	<File name="codigo.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1931" topLine="48" />
-		</Cursor>
-	</File>
-	<File name="linkedlist.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="615" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3852" topLine="89" />
-		</Cursor>
-	</File>
 	<File name="card.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="639" topLine="0" />
+			<Cursor1 position="976" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4384" topLine="96" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

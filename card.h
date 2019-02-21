@@ -31,4 +31,6 @@ int getCardValue (card* this);
 
 card* cardCalloc_newCard(void);
 
+int foo_Already_In_Deck (LinkedList *this, card* thiscard);
+
 #endif

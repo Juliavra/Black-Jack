@@ -20,7 +20,7 @@ Node* Node_NewNode(void);
 void imprimeLinkedList (LinkedList *this);
 
 
-
+void imprimeLinkedListData (LinkedList *this);
 
 /*
 int ll_len(LinkedList* this);

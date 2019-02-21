@@ -36,51 +36,20 @@ void imprimeLinkedList (LinkedList *this)
 {
 
     Node *p=this->pFirstNode;
+  ///  printf("\n\nFOO IMPRIME Node *p= %p\n", p);
+     printf("\n %p->", p);
+
+   if (p==NULL)
+   {
+      printf("\n FOO imprimeLinkedList: Linked List esta VACIA!!!");
+   }
+
     while(p!=NULL)
     {
-        ///printf("\t %d->", p->pElement);
-        printf("\t %p->", p->pNextNode);
+        printf(" %p->", p->pNextNode);
         p=p->pNextNode;
     }
 
-
-    /*
-    ///TERMINAR Y CORREGIR
-
-    Node *nextNode=NULL;
-    Node *temp=NULL;
-    card *imprimeNodo;
-
-    printf("\nLinkedList *this->size: %d\n", this->size);
-    printf("\nLinkedList *this->index: %d\n", this->index);
-    printf("\nLinkedList *this->index: %p\n", this->pFirstNode);
-
-    if (this->pFirstNode==NULL)
-    {
-        printf("EL PUNTERO this->pFirstNode == NULL");
-    }
-    else
-    {
-        temp=this->pFirstNode;
-        printf("\nLinkedList *temp->index: %p\n", temp);
-        nextNode=temp->pNextNode;
-        printf("\nnextNode=temp->pNextNode: %p\n");
-        printf("\ntemp->pNextNode: %p\n", temp->pNextNode);
-        printf("\nnextNode: %p\n", nextNode);
-
-                if (nextNode==NULL)
-                {
-                    printf("EL PUNTERO nextNode == NULL");
-                }
-                else
-                {
-
-                    imprimeNodo=(card*)nextNode->pElement;
-                    printf("\n nextNode suit: %d\n", imprimeNodo->suit);
-                }
-    }
-    //while
-*/
 }
 
 ///--------------------------------------------------------------------------------------------------------------------------------------
@@ -102,4 +71,32 @@ void imprimeLinkedList (LinkedList *this)
     return newNode;
 }/// CLOSES FOO NODE NEW NODE
 ///--------------------------------------------------------------------------------------------------------------------------------------
+///--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+///-------------------------------------------------------------------------------------------------------------------------------------
+///-------------------------------------------------------------------------------------------------------------------------------------
+void imprimeLinkedListData (LinkedList *this)
+{
+    card *carta;
+    Node *p=this->pFirstNode;
+    printf("\n %p->", p);
+
+   if (p==NULL)
+   {
+      printf("\n FOO imprimeLinkedList: Linked List esta VACIA!!!");
+   }
+
+    while(p!=NULL)
+    {
+        carta=(card*)p->pElement;
+        printf(" suit %d   value: %d  ->\n",carta->suit, carta->value);
+        p=p->pNextNode;
+    }
+
+}
+
 ///--------------------------------------------------------------------------------------------------------------------------------------
