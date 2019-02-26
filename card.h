@@ -1,6 +1,6 @@
 ///CARD.H
-///*************************************************************************************
-///*************************************************************************************
+///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #ifndef __CARD
 #define __CARD
 
@@ -18,19 +18,25 @@ typedef struct
 
 
 
-///*************************************************************************************
-///*************************************************************************************
+///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ///FOO DECLARATION
 
-void fooRandomizes_New_Card_Values (int *newCardValuePtr, int *newCardSuitPtr);
+LinkedList* foo_New_Deck();
+card* fooRandomizes_New_Card_Values (void);
+int fooRandomizes_New_Card_Value (void);
+int fooRandomizes_New_Card_Suit(void);
 card* card_newCard(void);
-int setCardSuit(card* this, int *newCardSuitPtr);
+int setCardSuit(card* this, int suit);
 int getCardSuit (card* this);
-int setCardValue(card* this, int *newCardValuePtr);
+int setCardValue(card* this, int value);
 int getCardValue (card* this);
-
 card* cardCalloc_newCard(void);
 
+
+int foo_Compare_Decks (LinkedList *Deck, LinkedList *other);
 int foo_Already_In_Deck (LinkedList *this, card* thiscard);
+
+
 
 #endif
