@@ -59,8 +59,8 @@ typedef struct
 
 ///init vars
 ///{
-///    Create scene
-///    Shuffle deck
+///    Create scene OK
+///    Shuffle deck OK
 ///}
 
 ///Takes bets

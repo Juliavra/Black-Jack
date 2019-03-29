@@ -16,10 +16,11 @@ struct LinkedList{
 LinkedList* ll_newLinkedList(void);
 Node* Node_NewNode(char *nombreNewNode);
 void imprimeLinkedList (LinkedList *this);
-void imprimeLinkedListData (LinkedList *this);
-
-LinkedList* foo_Creates_Decks_Randomly ();
-
+LinkedList* foo_Creates_Decks_Randomly (void);
+Node* foo_Finds_Last_Node (LinkedList *this);
+Node* foo_Finds_First_Node_And_Removes_It (LinkedList *this);
+int foo_Are_initial_Cards_Equal (LinkedList *this);
+LinkedList* foo_HARCODE_DATA_DECK(LinkedList *this);
 
 /*
 int ll_len(LinkedList* this);
@@ -41,10 +42,6 @@ LinkedList* ll_subList(LinkedList* this,int from,int to);
 LinkedList* ll_clone(LinkedList* this);
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
 */
-
-
-
-
 
 ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #endif
