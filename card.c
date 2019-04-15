@@ -185,16 +185,16 @@ int foo_Compare_Decks (LinkedList *Deck, LinkedList *other)
     Deckcard=card_newCard();
     othercard=card_newCard();
 
-    printf("\n DeckCard\n");
+///    printf("\n DeckCard\n");
    /// imprimeLinkedList(Deck);
-    printf("\n\n\n OtherCard\n");
+///    printf("\n\n\n OtherCard\n");
 ///    imprimeLinkedList(other);
 
 ///system("pause");
-    printf("\nDeckcard->suit: %d\t", Deckcard->suit);
-    printf("\tDeckcard->value: %d\n", Deckcard->value);
-    printf("\nothercard->suit: %d\t", othercard->suit);
-    printf("\tothercard->value: %d\n", othercard->value);
+///    printf("\nDeckcard->suit: %d\t", Deckcard->suit);
+   /// printf("\tDeckcard->value: %d\n", Deckcard->value);
+    ///printf("\nothercard->suit: %d\t", othercard->suit);
+   /// printf("\tothercard->value: %d\n", othercard->value);
 
     do
     {
@@ -203,14 +203,14 @@ int foo_Compare_Decks (LinkedList *Deck, LinkedList *other)
             Deckcard=NodeDeck->pElement;
             othercard=NodeOther->pElement;
 
-            printf("\nDeckcard->suit: %d\t", Deckcard->suit);
-            printf("\tDeckcard->value: %d\n", Deckcard->value);
-            printf("\nothercard->suit: %d\t", othercard->suit);
-            printf("\tothercard->value: %d\n", othercard->value);
+///            printf("\nDeckcard->suit: %d\t", Deckcard->suit);
+   ///         printf("\tDeckcard->value: %d\n", Deckcard->value);
+      ///      printf("\nothercard->suit: %d\t", othercard->suit);
+         ///   printf("\tothercard->value: %d\n", othercard->value);
 
             if (Deckcard->suit==othercard->suit)
             {
-                printf("\nsuit ==\n");
+///                printf("\nsuit ==\n");
                 if (Deckcard->value==othercard->value)
                 {
                     printf("\nvalue==\n");
@@ -256,14 +256,12 @@ int foo_Adds_Cards_Value (LinkedList *this)
     while (tempNode!=NULL)
     {
         cardValue= (card*)tempNode->pElement;
-        //  printf("cardValue:%d", cardValue);
-        //   system("pause");
+        ///  printf("cardValue:%d", cardValue);
+        ///   system("pause");
 
         if (cardValue->value==1)
         {
-            cardToAdd=11;
-      ///      printf("\n\n\nAS debe valer 11\n\n\n");
-       ///     system("pause");
+            cardToAdd=11;         ///      printf("\n\n\nAS debe valer 11\n\n\n");   ///     system("pause");
         }
         else if (cardValue->value==11 || cardValue->value==12 || cardValue->value==13 )
         {
@@ -553,25 +551,26 @@ void foo_Prints_Hand_Banca_Shows_Both_Cards(LinkedList *this, escenarioPosicionX
 ///-----------------------------------------------------------
 ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 int foo_Adds_Cards_Value_Banca (LinkedList *this)
 {
     ///FALTA ARMAR LA PARTE DEL AS Q ES 1 U 11
     Node *tempNode=NULL;
     int cardSum=0, cardToAdd=0;
     card *cardValue=NULL;
+    int aces_In_Hand=0;
+    int cardSum_Aceless=0;
 
     tempNode=this->pFirstNode;
-
     while (tempNode!=NULL)
     {
-        cardValue= (card*)tempNode->pElement;
-        ///     printf("\nfoo_Adds_Cards_Value_Banca\n", cardValue->suit);
-        /// printf("\ncardValue->suit:%d\n", cardValue->suit);
-    ///    printf("\ncardValue->value:%d\n", cardValue->value);
+        cardValue= (card*)tempNode->pElement;       ///     printf("\nfoo_Adds_Cards_Value_Banca\n", cardValue->suit);          /// printf("\ncardValue->suit:%d\n", cardValue->suit);      ///    printf("\ncardValue->value:%d\n", cardValue->value);
         ///   system("pause");
         if (cardValue->value==1)
         {
             cardToAdd=11;
+            aces_In_Hand++;
+
         }
         else if (cardValue->value==11 || cardValue->value==12 || cardValue->value==13 )
         {
@@ -582,17 +581,66 @@ int foo_Adds_Cards_Value_Banca (LinkedList *this)
             cardToAdd=cardValue->value;
         }
         cardSum=cardSum+cardToAdd;
-        if (cardSum>21)
-        {
-            ///opcion 1 crear un contador q indique q hay un o mas ases
-            ///y en ese caso se descuenta 10 si se paso
-        }
-     ///   printf("cardSum: %d", cardSum);
+
         tempNode=tempNode->pNextNode;
     }
+///printf("\nAces in hand: %d\n", aces_In_Hand);  // system("pause");
+///printf("\ncards value: %d\n", cardSum);  // system("pause");
+
+cardToAdd=0;
+tempNode=this->pFirstNode;
+while (tempNode!=NULL)
+    {
+        cardValue= (card*)tempNode->pElement;       ///     printf("\nfoo_Adds_Cards_Value_Banca\n", cardValue->suit);          /// printf("\ncardValue->suit:%d\n", cardValue->suit);      ///    printf("\ncardValue->value:%d\n", cardValue->value);
+        ///   system("pause");
+        if (cardValue->value==1)
+        {
+            cardToAdd=0;
+           /// aces_In_Hand++;
+
+        }
+        else if (cardValue->value==11 || cardValue->value==12 || cardValue->value==13 )
+        {
+            cardToAdd=10;
+        }
+        else
+        {
+            cardToAdd=cardValue->value;
+        }
+        cardSum_Aceless=cardSum_Aceless+cardToAdd;
+
+        tempNode=tempNode->pNextNode;
+    }
+///printf("\n SUMA cardSum_Aceless:%d\n",cardSum_Aceless);
+///   system("pause");
+///-----------------------------------------------------------------------------------
+///-----------------------------------------------------------------------------------
+    if (cardSum>21)
+        { ///  printf("\n\n\ncardSum_Aceless: %d\n\n\n", cardSum_Aceless);
+            if (cardSum_Aceless<2)
+            {                                                ///   printf("MENOR Q 2 TODO AS=1: %d ", aces_In_Hand);
+            cardSum=cardSum_Aceless+((aces_In_Hand-1)*1)+11;     ///  printf("cardSum: %d", cardSum);
+///system("pause");
+            }
+
+
+            if (cardSum_Aceless>10)
+            {                                              ///     printf("TODO AS=1: %d ", aces_In_Hand);
+            cardSum=cardSum_Aceless+(aces_In_Hand*1);   ///     printf("cardSum: %d", cardSum);
+///system("pause");
+            }
+            else
+            {
+                //cardSum=cardSum_Aceless+((aces_In_Hand-1)*1)+11;        printf("cardSum: %d", cardSum);
+            }
+        }
+
+
     return cardSum;
 }
 
+///-----------------------------------------------------------------
+///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ///-----------------------------------------------------------------
 ///-----------------------------------------------------------------
 void foo_Prints_Hand_Double(LinkedList *this, escenarioPosicionXY scene[], int XFila, int YColumna)
@@ -622,23 +670,11 @@ void foo_Prints_Hand_Double(LinkedList *this, escenarioPosicionXY scene[], int X
 }
 ///------------------------------------------------------------------------------------------------------------
 ///------------------------------------------------------------------------------------------------------------
-void foo_Prints_Hand_Split(LinkedList *playerOne_1st, LinkedList *playerOne_2nd, escenarioPosicionXY scene[], int XFila, int YColumna)
+void foo_Prints_Hand_Split(LinkedList *this, escenarioPosicionXY scene[], int XFila, int YColumna)
 {
     Node *tempNode=NULL;
     card *cardToBePrinted;
-    tempNode= playerOne_1st->pFirstNode;
-
-    while (tempNode!=NULL)
-    {
-      ///printf("\n\nTemp Node: %p\n\n", tempNode);
-    ///system("pause");
-            cardToBePrinted=tempNode->pElement;
-            foo_Card_ConStruct_Scenario(XFila, YColumna, scene, cardToBePrinted);
-            YColumna=YColumna+26;
-            tempNode=tempNode->pNextNode;
-    }
-
- tempNode= playerOne_2nd->pFirstNode;
+    tempNode= this->pFirstNode;
 
     while (tempNode!=NULL)
     {
@@ -649,7 +685,6 @@ void foo_Prints_Hand_Split(LinkedList *playerOne_1st, LinkedList *playerOne_2nd,
             YColumna=YColumna+6;
             tempNode=tempNode->pNextNode;
     }
-
 }
 ///------------------------------------------------------------------------------------------------------------
 ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -658,7 +693,7 @@ void foo_Card_Erase_From_Scenario(int XFila, int YColumna, escenarioPosicionXY s
     int lineaParalela=0;
     int i=0, j=0, k=0, t=0,  valorScene=0;
     int largoCaja=4, altoCaja=4;
-    int suit=0, value=0;
+  ///  int suit=0, value=0;
 
     for (i=0; i<FILA; i++)
     {

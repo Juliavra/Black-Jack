@@ -38,6 +38,10 @@
 		<Unit filename="codigo.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="control.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="control.h" />
 		<Unit filename="header.h" />
 		<Unit filename="linkedlist.c">
 			<Option compilerVar="CC" />
@@ -46,6 +50,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="scenario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="scenario.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

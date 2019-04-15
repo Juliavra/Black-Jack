@@ -21,7 +21,7 @@ Node* foo_Finds_Last_Node (LinkedList *this);
 Node* foo_Finds_First_Node_And_Removes_It (LinkedList *this);
 int foo_Are_initial_Cards_Equal (LinkedList *this);
 LinkedList* foo_HARCODE_DATA_DECK(LinkedList *this);
-
+LinkedList* ll_clone(LinkedList* this);
 /*
 int ll_len(LinkedList* this);
 Node* test_getNode(LinkedList* this, int nodeIndex);
@@ -39,7 +39,7 @@ void* ll_pop(LinkedList* this,int index);
 int ll_contains(LinkedList* this, void* pElement);
 int ll_containsAll(LinkedList* this,LinkedList* this2);
 LinkedList* ll_subList(LinkedList* this,int from,int to);
-LinkedList* ll_clone(LinkedList* this);
+
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
 */
 

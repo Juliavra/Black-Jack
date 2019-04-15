@@ -48,7 +48,8 @@ void foo_Card_ConStruct_Empty(int XFila, int YColumna, escenarioPosicionXY scene
 void foo_Prints_Hand_Banca(LinkedList *this, escenarioPosicionXY scene[], int XFila, int YColumna);
 void foo_Prints_Hand_Banca_Shows_Both_Cards(LinkedList *this, escenarioPosicionXY scene[], int XFila, int YColumna);
 void foo_Prints_Hand_Double(LinkedList *this, escenarioPosicionXY scene[], int XFila, int YColumna);
-void foo_Prints_Hand_Split(LinkedList *playerOne_1st, LinkedList *playerOne_2nd, escenarioPosicionXY scene[], int XFila, int YColumna);
+///void foo_Prints_Hand_Split(LinkedList *playerOne_1st, LinkedList *playerOne_2nd, escenarioPosicionXY scene[], int XFila, int YColumna);
+void foo_Prints_Hand_Split(LinkedList *this, escenarioPosicionXY scene[], int XFila, int YColumna);
 void foo_Card_Erase_From_Scenario(int XFila, int YColumna, escenarioPosicionXY scene[]);
 
 #endif

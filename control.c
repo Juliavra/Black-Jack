@@ -290,11 +290,10 @@ int foo_Machine_Plays (LinkedList *banca, LinkedList *Deck)
 tag2:
         if (bancaCards<=16)
         {
-           // printf("\n\nffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\n\n");
-            nextCard=foo_Finds_First_Node_And_Removes_It (Deck);
-            tempNode=foo_Finds_Last_Node (banca);
-            tempNode->pNextNode=nextCard;
-            flag=1;
+           nextCard=foo_Finds_First_Node_And_Removes_It (Deck);
+           tempNode=foo_Finds_Last_Node (banca);
+           tempNode->pNextNode=nextCard;
+           flag=1;
         }
         else if (bancaCards>=17)
         {
@@ -313,11 +312,11 @@ bancaCards=foo_Adds_Cards_Value_Banca(banca);
     {
         printf("\nBANCA SE PASO\n");
         //flag=0;
-        tempNode=banca->pFirstNode;
-        do
+     /*   tempNode=banca->pFirstNode;
+       do
         {
             //  imprimeLinkedList(banca);///BORRRAR
-///            system("pause");
+            system("pause");
             isThereAnAce=tempNode->pElement;
             if (isThereAnAce->value==1)
             {
@@ -332,62 +331,27 @@ bancaCards=foo_Adds_Cards_Value_Banca(banca);
       ///      printf("\n\nbancaCards: %d\n\n", bancaCards);
         }
         while(tempNode!=NULL);  ///CLOSES WHILE
+        */
         imprimeLinkedList(banca);
     }
     if(bancaCards<=16)
     {
         goto tag2;
     }
-
+system("pause");
     return bancaCards;
 }
 
 ///------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ///------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-int foo_Controls_Hand_Player (LinkedList *playerOne)
-{
-    int playerOneCards=0;
-    int acesCounter=0;
-    /// int flag=-1;
-    card *isThereAnAce=NULL;
-///    Node *nextCard=NULL;
-    Node *tempNode=NULL;
-
-    playerOneCards=foo_Adds_Cards_Value(playerOne);     ///printf("\nFOO CONTROL PLAYER 1 playerOneCards: %d\n", playerOneCards);
-    if (playerOneCards>=22)
-    {
-  //      printf("\nPLAYER SE PASO\n");
-        tempNode=playerOne->pFirstNode;
-        do
-        {
-//            system("pause");
-            isThereAnAce=tempNode->pElement;
-            if (isThereAnAce->value==1)
-            {
-                printf("\n\n playerOneCards: %d\n\n", playerOneCards);
-                playerOneCards=playerOneCards-10;
-                printf("\n\n en If playerOneCards: %d\n\n", playerOneCards);
-                acesCounter++;
-                //break;
-            }
-            ///   printf("\n\ntempNode: %p\n\n", tempNode);
-            tempNode=tempNode->pNextNode;
-            ///   printf("\nplayerOneCards: %d\n\n", playerOneCards);
-        }
-        while(tempNode!=NULL);  ///CLOSES WHILE
-     //   imprimeLinkedList(playerOne);
-    }
-//    imprimeLinkedList(playerOne);
-    return playerOneCards;
-}
 
 ///------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ///------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-void foo_Double_Tap_The_Table (LinkedList *playerOne, LinkedList *Deck)
+void foo_Double_Tap_The_Table (LinkedList *this, LinkedList *Deck)
 {
     Node *tempNode;
 
-    tempNode=foo_Finds_Last_Node (playerOne);
+    tempNode=foo_Finds_Last_Node (this);
     tempNode->pNextNode=(Node*) foo_Finds_First_Node_And_Removes_It (Deck);
 }
 ///------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -412,14 +376,14 @@ int stillAlive (int playerOneCards)
 
 ///-------------------------------------------------------------------------------------------------------
 ///-------------------------------------------------------------------------------------------------------
-void deals_Two_Cards_To_Each_Player (LinkedList *Deck, LinkedList *playerOne, LinkedList *banca)
+void deals_Two_Cards_To_Each_Player (LinkedList *Deck, LinkedList *playerOne_1st, LinkedList *banca)
 {
     Node *tempNode=NULL;
 
-    playerOne->pFirstNode=(Node*) foo_Finds_First_Node_And_Removes_It (Deck);
+    playerOne_1st->pFirstNode=(Node*) foo_Finds_First_Node_And_Removes_It (Deck);
     banca->pFirstNode=(Node*) foo_Finds_First_Node_And_Removes_It (Deck);
 
-    tempNode=playerOne->pFirstNode;
+    tempNode=playerOne_1st->pFirstNode;
     tempNode->pNextNode=(Node*) foo_Finds_First_Node_And_Removes_It (Deck);
 
     tempNode=banca->pFirstNode;
@@ -427,7 +391,7 @@ void deals_Two_Cards_To_Each_Player (LinkedList *Deck, LinkedList *playerOne, Li
 }
 ///------------------------------------------------------------------------------------------------------------------
 ///------------------------------------------------------------------------------------------------------------------
-int Calculates_controlValue (LinkedList *banca, LinkedList *playerOne)
+int Calculates_controlValue (LinkedList *banca, LinkedList *playerOne_1st)
 {
     Node *tempNode=NULL;
     card *cardPtr=NULL;
@@ -441,7 +405,7 @@ int Calculates_controlValue (LinkedList *banca, LinkedList *playerOne)
      ///   printf("\nla primera carta es un as\n");
         controlValue++;
     }
-    areEqual=foo_Are_initial_Cards_Equal(playerOne);    ///HACER UNA SOLA SENTENCIA DE ESTO
+    areEqual=foo_Are_initial_Cards_Equal(playerOne_1st);    ///HACER UNA SOLA SENTENCIA DE ESTO
     if(areEqual)
     {
         ///MENU ALL IN

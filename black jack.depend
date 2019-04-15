@@ -6,7 +6,7 @@
 
 1549509726 c:\utn\mp3 l1brary manag3r\v 2.0\black jack\header.h
 
-1553697228 source:c:\utn\black jack\main.c
+1555228659 source:c:\utn\black jack\main.c
 	<stdio.h>
 	<stdlib.h>
 	"header.h"
@@ -17,30 +17,30 @@
 
 1552154153 c:\utn\black jack\header.h
 
-1553696916 source:c:\utn\black jack\card.c
+1555141411 source:c:\utn\black jack\card.c
 	<stdio.h>
 	<stdlib.h>
 	"linkedlist.h"
 	"card.h"
 	"scenario.h"
 
-1553692076 c:\utn\black jack\card.h
+1555128098 c:\utn\black jack\card.h
 	<stdio.h>
 	<stdlib.h>
 	"linkedlist.h"
 	"scenario.h"
 
-1553518209 c:\utn\black jack\linkedlist.h
+1555228164 c:\utn\black jack\linkedlist.h
 
 1553690052 source:c:\utn\black jack\codigo.c
 
-1553608117 source:c:\utn\black jack\linkedlist.c
+1555339155 source:c:\utn\black jack\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	"linkedlist.h"
 	"card.h"
 
-1553697229 source:c:\utn\black jack\scenario.c
+1555171145 source:c:\utn\black jack\scenario.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -59,7 +59,7 @@
 	<ctype.h>
 	"linkedlist.h"
 
-1553393587 source:c:\utn\black jack\control.c
+1555227470 source:c:\utn\black jack\control.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -69,7 +69,7 @@
 	"linkedlist.h"
 	"card.h"
 
-1553184031 c:\utn\black jack\control.h
+1555227684 c:\utn\black jack\control.h
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

@@ -567,6 +567,25 @@ void screen_Player_Plays (escenarioPosicionXY scene[], LinkedList *playerOne, Li
         foo_Sets_Face(scene);
         foo_Resolves_After_player_Choice (scene, controlValue);///se encarga de definir el manu correspondiente
 
+
+
+/*
+                   ///RESOLVER LA JUGADA HASTA Q JUEGA LA MAQUINA
+            tempNode=foo_Finds_Last_Node (playerOne);
+            tempNode->pNextNode=foo_Finds_First_Node_And_Removes_It (Deck);                imprimeLinkedList(playerOne);    system("pause");
+            ///tempNode=foo_Finds_First_Node_And_Removes_It (Deck);                imprimeLinkedList(playerOne);    system("pause");
+            playerOneCards=foo_Adds_Cards_Value_Banca(playerOne);
+            foo_Prints_Hand_Double(playerOne, scene, 15, 35);
+            foo_Prints_Header_BJack (scene, betAmountPtr,playerOneCards, creditsPtr, bancaCards);
+            fooprintsScenario(scene);
+            controlValue=1;
+            flag=0;
+            break;
+*/
+
+
+
+
     }
     else if (isSplitPtr!=0)
     {

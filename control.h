@@ -19,11 +19,9 @@ int player_Choice_Resolution_Full (int controlValue);
 
 int foo_Machine_Plays (LinkedList *banca, LinkedList *Deck);
 
-int foo_Controls_Hand_Player (LinkedList *playerOne);
+void foo_Double_Tap_The_Table (LinkedList *playerOne_1st, LinkedList *Deck);
 
-void foo_Double_Tap_The_Table (LinkedList *playerOne, LinkedList *Deck);
-
-void deals_Two_Cards_To_Each_Player (LinkedList *Deck, LinkedList *playerOne, LinkedList *banca);
+void deals_Two_Cards_To_Each_Player (LinkedList *Deck, LinkedList *playerOne_1st, LinkedList *banca);
 int Calculates_controlValue (LinkedList *banca, LinkedList *playerOne);
 int stillAlive (int playerOneCards);
 int who_Wins (int bancaCards, int playerOneCards);
